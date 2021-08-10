@@ -6,10 +6,7 @@ import { useEffect } from "react";
 
 const MyMovieList = () => {
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
-  console.log(watchlist);
-  const { lists, getWatchlist, addToWatchlist, removeFromWatchlist } =
-    useContext(DataContext);
-  console.log(lists);
+  const { getWatchlist } = useContext(DataContext);
   useEffect(() => {
     getWatchlist();
   }, []);

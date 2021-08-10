@@ -99,7 +99,6 @@ export const DataProvider = (props) => {
     let newWatchList = JSON.parse(localStorage.getItem("watchlist")).filter(
       (filter) => filter.Title !== item.Title
     );
-    console.log("new", newWatchList);
     localStorage.setItem("watchlist", JSON.stringify(newWatchList));
     setList({
       ...lists,
