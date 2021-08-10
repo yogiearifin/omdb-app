@@ -13,12 +13,16 @@ const MovieList = () => {
   return (
     <div className={listContainer}>
       <div>
-        {lists.listMovie.Search
-          ? lists.listMovie.Search &&
-            lists.listMovie.Search.map((item, index) => {
-              return <Card item={item} key={index} />;
-            })
-          : "Loading..."}
+        {lists.listMovie.Search ? (
+          lists.listMovie.Search &&
+          lists.listMovie.Search.map((item, index) => {
+            return <Card item={item} key={index} />;
+          })
+        ) : (
+          <div>
+            <h1>Loading...</h1>
+          </div>
+        )}
       </div>
       {lists.listMovie.Search ? (
         <div className={sectionPagination}>

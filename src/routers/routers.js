@@ -16,7 +16,11 @@ const Routers = () => {
         <MyMovieList />
       </Route>
       <Route path="*">
-        <div>Not Found :(</div>
+        <div
+          style={{ marginTop: "60px", display: "flex", justifyContent:"center" }}
+        >
+          <h1>Page Not Found :(</h1>
+        </div>
       </Route>
     </Switch>
   );

@@ -29,18 +29,13 @@ export const DataProvider = (props) => {
   };
   const getMovieList = (page = 1) => {
     axios
-      .get(
-        `${BASE_URL}?apikey=${API_KEY}&s=fast&page=${page}&type=movie`
-      )
+      .get(`${BASE_URL}?apikey=${API_KEY}&s=fast&page=${page}&type=movie`)
       .then((res) =>
         setList({
           ...lists,
           listMovie: res.data,
           page: parseInt(page),
-          maxPage:
-            lists.listMovie.totalResults % 10 !== 0
-              ? Math.round(res.data.totalResults / 10) + 1
-              : Math.round(res.data.totalResults / 10),
+          maxPage: Math.round(res.data.totalResults / 10),
         })
       )
       .catch((err) => console.log(err));

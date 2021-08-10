@@ -14,7 +14,6 @@ const DetailMovie = () => {
     addToWatchlist,
     removeFromWatchlist,
   } = useContext(DataContext);
-  console.log(lists);
   useEffect(() => {
     getMovieDetail(id);
     getWatchlist();
