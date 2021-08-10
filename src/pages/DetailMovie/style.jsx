@@ -5,6 +5,7 @@ export const detailContainer = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
   img {
     width: 300px;
   }
