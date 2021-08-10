@@ -20,24 +20,22 @@ const DetailMovie = () => {
     getWatchlist();
   }, []);
   return (
-    <>
-      <div className={detailContainer}>
-        <h1>{lists.detailMovie.Title}</h1>
-        <img src={lists.detailMovie.Poster} alt={lists.detailMovie.Title} />
-        <WatchlistButton
-          lists={lists}
-          item={lists.detailMovie}
-          addToWatchlist={addToWatchlist}
-          removeFromWatchlist={removeFromWatchlist}
-        />
-      </div>
+    <div className={detailContainer}>
+      <h1>{lists.detailMovie.Title}</h1>
+      <img src={lists.detailMovie.Poster} alt={lists.detailMovie.Title} />
+      <WatchlistButton
+        lists={lists}
+        item={lists.detailMovie}
+        addToWatchlist={addToWatchlist}
+        removeFromWatchlist={removeFromWatchlist}
+      />
       <div className={detailInfo}>
         <p>{lists.detailMovie.Plot}</p>
         <p>Genre: {lists.detailMovie.Genre}</p>
         <p>Actors: {lists.detailMovie.Actors}</p>
         <p>Released: {lists.detailMovie.Released}</p>
       </div>
-    </>
+    </div>
   );
 };
 export default DetailMovie;
