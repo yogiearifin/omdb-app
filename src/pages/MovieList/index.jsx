@@ -7,7 +7,6 @@ import { listContainer, sectionPagination } from "./style";
 
 const MovieList = () => {
   const { lists, getMovieList, pagination } = useContext(DataContext);
-  console.log(lists);
   useEffect(() => {
     getMovieList();
   }, []);
