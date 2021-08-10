@@ -30,7 +30,7 @@ export const DataProvider = (props) => {
   const getMovieList = (page = 1) => {
     axios
       .get(
-        `${BASE_URL}?apikey=${API_KEY}&s=fast and furious&page=${page}&type=movie`
+        `${BASE_URL}?apikey=${API_KEY}&s=fast&page=${page}&type=movie`
       )
       .then((res) =>
         setList({
